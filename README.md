@@ -1,51 +1,53 @@
 MULTIPLE PUBLIC SSH KEY ON YOUR MAC OSX
 =======================================
 
-1. CREATE YOUR SSH KEYS
------------------------
+Create your ssh keys
+--------------------
+
 First you need to create your two ssh key
 
-  >> ssh-keygen -t rsa -C "test1@test.com"
-  >> ssh-keygen -t rsa -f ~/.ssh/id_rsa_OTHER_LABEL -C "test2@test.com"
+    $ ssh-keygen -t rsa -C "test1@test.com"
+    $ ssh-keygen -t rsa -f ~/.ssh/id_rsa_OTHER_LABEL -C "test2@test.com"
 
 Note: You can use anyname for your public second key
-----
 
-2. ATTACH THE GITHUB KEYS
--------------------------
+
+Attach to github
+----------------
 
 login in each github account and attach your keys respectively.
 What do you gonna attach ?
 
-  >> vim ~/.ssh/id_rsa[YOUR_NAME].pub
+    $ vim ~/.ssh/id_rsa[YOUR_NAME].pub
+
 copy and paste into the public key field at github page
 
-3. CREATE A CONFIG FILE
------------------------
+Create a ssh config file
+------------------------
 Well, we create two differents ssh keys and attach respectively in github.
 Now, we have to create a way to identify the differents github accounts.
 
-  Create a config file
+Create a config file
    $ touch ~/.ssh/config
    $ vim ~/.ssh/config
 
 example:
 
-#Default GitHub
-Host github.com
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa
-#Default GitHub
-Host github-company
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_rsa_OTHER_LABEL
+    #Default GitHub
+    Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    #Default GitHub
+    Host github-company
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_OTHER_LABEL
 
 and save the changes.
 
-4. HOW IT WORKS?
-----------------
+How does it works?
+------------------
 
 Now, if you wanna create new project, you have to specify the HOST name in the
 add remote origin step change.
