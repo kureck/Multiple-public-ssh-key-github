@@ -58,11 +58,11 @@ Example
     $ git init
     $ git commit -m"firt commit"
 
-now if you use your first one ( normal github )
+now if you use your default one ( Github )
 
     $ git remote add origin git@github.com:Company/testing.git
 
-instead it you want to use the other user just change the HOST name
+instead it, you want to use the other user just change the HOST name
 
     $ git remote add origin git@github-COMPANY:Company/testing.git
 
