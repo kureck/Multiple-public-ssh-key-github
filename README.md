@@ -28,8 +28,8 @@ Well, we create two differents ssh keys and attach respectively in github.
 Now, we have to create a way to identify the differents github accounts.
 
 Create a config file
-   $ touch ~/.ssh/config
-   $ vim ~/.ssh/config
+    $ touch ~/.ssh/config
+    $ vim ~/.ssh/config
 
 example:
 
@@ -49,15 +49,15 @@ and save the changes.
 How does it works?
 ------------------
 
-Now, if you wanna create new project, you have to specify the HOST name in the
-add remote origin step change.
+Now, if you want to create a new project, you have to specify the HOST name in the
+add remote origin step.
 
 Example
     $ git init
     $ git commit -m"firt commit"
-#now if you use your first one ( normal github )
+now if you use your first one ( normal github )
     $ git remote add origin git@github.com:Company/testing.git
-#instead it you want to use the other user just change the HOST name
+instead it you want to use the other user just change the HOST name
     $ git remote add origin git@github-COMPANY:Company/testing.git
 
 :)
