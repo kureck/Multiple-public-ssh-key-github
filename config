@@ -1,12 +1,11 @@
-# Default GitHub user
+#Default GitHub
 Host github.com
-  User git
-  Hostname github.com
-  IdentityFile /Users/USERNAME/.ssh/id_rsa
-# Default GitHub user
-Host github-second
-  User git
-  Hostname github.com
-  IdentityFile /Users/USERNAME/.ssh/id_rsa_second
-
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+#Default GitHub
+Host github-company
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_OTHER_LABEL
 
