@@ -47,7 +47,7 @@ example:
 
 and save the changes.
 
-How does it works?
+How does it work?
 ------------------
 
 Now, if you want to create a new project, you have to specify the HOST name in the
